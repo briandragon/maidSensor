@@ -11,6 +11,6 @@ system('raspistill -o camera_image.jpg')
 
 puts "uploading..."
 file = open('camera_image.jpg')
-response = client.put_file('/latest.jpg', file)
+response = client.put_file('maidSensor/latest.jpg', file)
 
 puts "uploaded:", response.inspect
